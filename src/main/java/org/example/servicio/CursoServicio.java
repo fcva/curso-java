@@ -19,10 +19,10 @@ public class CursoServicio implements InterfaceCursoServicio{
     }
     @Override
     public Curso actualizarCurso(Curso curso) {
-        return null;
+        return repositorio.save(curso);
     }
     @Override
     public void eliminarCurso(Long id) {
-
+        repositorio.deleteById(id);
     }
 }
